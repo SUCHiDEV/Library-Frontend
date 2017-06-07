@@ -5,7 +5,6 @@ app.service('AppService',function($q, $http){
     var self = this;
 
     this.doRequestGET = function (request_url) {
-        request_url = _addVariable(request_url);
         var def = $q.defer(),
             request = {
                 headers: {
@@ -30,7 +29,6 @@ app.service('AppService',function($q, $http){
     };
 
     this.doRequestPOST = function (request_url, data) {
-        request_url = _addVariable(request_url);
         var def = $q.defer(),
             request = {
                 headers: {
